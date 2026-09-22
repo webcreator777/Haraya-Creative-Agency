@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start a Project — Haraya Creative Agency</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-start-project">
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+    <header class="navbar project-navbar" id="projectNavbar">
+        <a href="index.html" class="nav-logo">HARAYA</a>
+        
+        <nav class="desktop-nav">
+            <a href="index.html" class="nav-cta back-home-btn">← Back to Home</a>
+        </nav>
+
+        <!-- Mobile Back Button -->
+        <a href="index.html" class="mobile-back-btn">← Back</a>
+    </header>
+
+    <main>
+        <!-- =====================================
+             PROJECT HERO
+        ====================================== -->
+        <section class="project-hero">
+            <div class="section-label">PROJECT INQUIRY</div>
+            <h1>
+                Start a<br>
+                <em>Project.</em>
+            </h1>
+            <p>Tell us what you're imagining. Let's build something that gets your brand noticed.</p>
+        </section>
+
+        <!-- =====================================
+             FORM SECTION
+        ====================================== -->
+        <section class="project-form-section">
+            <div class="form-container">
+                <form id="projectForm" class="inquiry-form">
+                    
+                    <!-- SECTION 1: YOUR INFORMATION -->
+                    <div class="form-section">
+                        <h3>01. Your Information</h3>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span>*</span></label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Jane Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyName">Company / Business Name <span>*</span></label>
+                                <input type="text" id="companyName" name="companyName" required placeholder="Your Brand Ltd.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailAddress">Email Address <span>*</span></label>
+                                <input type="email" id="emailAddress" name="emailAddress" required placeholder="hello@yourbrand.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+63 XXX XXX XXXX">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label>Preferred Contact Method</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="contactMethod" value="Email" checked> Email</label>
+                                    <label class="radio-label"><input type="radio" name="contactMethod" value="Phone"> Phone</label>
+                                    <label class="radio-label"><input type="radio" name="contactMethod" value="Messenger"> Messenger</label>
+                                    <label class="radio-label"><input type="radio" name="contactMethod" value="Other"> Other</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: YOUR PROJECT -->
+                    <div class="form-section">
+                        <h3>02. Your Project</h3>
+                        
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="serviceNeeded">What service are you interested in? <span>*</span></label>
+                                <div class="select-wrapper">
+                                    <select id="serviceNeeded" name="serviceNeeded" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="Branding">Branding</option>
+                                        <option value="Logo Design">Logo Design</option>
+                                        <option value="Brand Identity">Brand Identity</option>
+                                        <option value="Graphic Design">Graphic Design</option>
+                                        <option value="Web Design">Web Design</option>
+                                        <option value="Photography">Photography</option>
+                                        <option value="Video Production">Video Production</option>
+                                        <option value="Content Creation">Content Creation</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="projectGoal">What is the main goal of this project?</label>
+                                <div class="select-wrapper">
+                                    <select id="projectGoal" name="projectGoal">
+                                        <option value="" disabled selected>Select a primary goal</option>
+                                        <option value="Build a new brand">Build a new brand</option>
+                                        <option value="Improve an existing brand">Improve an existing brand</option>
+                                        <option value="Create a website">Create a website</option>
+                                        <option value="Promote a product or service">Promote a product or service</option>
+                                        <option value="Create marketing content">Create marketing content</option>
+                                        <option value="Increase brand awareness">Increase brand awareness</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="projectDescription">Tell us about your project <span>*</span></label>
+                                <textarea id="projectDescription" name="projectDescription" required rows="5" placeholder="Tell us about your business, your goals, and what you would like us to create."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3: PROJECT DETAILS -->
+                    <div class="form-section">
+                        <h3>03. Project Details</h3>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="estimatedBudget">Estimated Budget</label>
+                                <div class="select-wrapper">
+                                    <select id="estimatedBudget" name="estimatedBudget">
+                                        <option value="" disabled selected>Select a budget range</option>
+                                        <option value="Under ₱10,000">Under ₱10,000</option>
+                                        <option value="₱10,000 - ₱25,000">₱10,000 – ₱25,000</option>
+                                        <option value="₱25,000 - ₱50,000">₱25,000 – ₱50,000</option>
+                                        <option value="₱50,000 - ₱100,000">₱50,000 – ₱100,000</option>
+                                        <option value="₱100,000+">₱100,000+</option>
+                                        <option value="Not sure yet">I'm not sure yet</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="desiredTimeline">Desired Timeline</label>
+                                <div class="select-wrapper">
+                                    <select id="desiredTimeline" name="desiredTimeline">
+                                        <option value="" disabled selected>Select a timeline</option>
+                                        <option value="ASAP">As soon as possible</option>
+                                        <option value="Within 1 month">Within 1 month</option>
+                                        <option value="1-3 months">1–3 months</option>
+                                        <option value="3-6 months">3–6 months</option>
+                                        <option value="Flexible">Flexible / No specific deadline</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="referralSource">How did you hear about us?</label>
+                                <div class="select-wrapper">
+                                    <select id="referralSource" name="referralSource">
+                                        <option value="" disabled selected>Select an option</option>
+                                        <option value="Facebook">Facebook</option>
+                                        <option value="Instagram">Instagram</option>
+                                        <option value="Google">Google</option>
+                                        <option value="Referral">Referral</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: ADDITIONAL INFO -->
+                    <div class="form-section">
+                        <h3>04. Additional Information (Optional)</h3>
+                        <div class="form-group full-width">
+                            <label for="additionalInfo">Anything else you'd like us to know?</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Share any additional requirements, ideas, references, or important details about your project."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="form-submit">
+                        <button type="submit" class="cta-button submit-btn">Submit Project Request →</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- SUCCESS POPUP -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-popup">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h2>Project Request Submitted</h2>
+            <p>Thank you for reaching out to Haraya Creative Agency. We've received your project request and will get back to you soon.</p>
+        </div>
+    </div>
+
+    <!-- =========================================
+         FOOTER (Exact Match)
+    ========================================== -->
+    <footer class="haraya-footer">
+        <div class="haraya-footer-container">
+            <div class="haraya-footer-socials">
+                <a href="https://www.facebook.com/share/19Nyep2dYW/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://x.com/hiraya_4A" target="_blank" aria-label="X (Twitter)">
+                    <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/harayacreativeagency/" target="_blank" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="mailto:hello@harayacreativeagency.com" aria-label="Email Us">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+
+            <div class="haraya-footer-main">
+                <div class="haraya-footer-links-group">
+                    <h4 class="haraya-footer-heading">About</h4>
+                    <a href="index.html#about">About Haraya</a>
+                    <a href="index.html#work">Our Work</a>
+                    <a href="index.html#why">Why Haraya</a>
+                </div>
+                
+                <div class="haraya-footer-links-group">
+                    <h4 class="haraya-footer-heading">Services</h4>
+                    <a href="index.html#branding">Branding</a>
+                    <a href="index.html#design">Design</a>
+                    <a href="index.html#media">Media</a>
+                    <a href="index.html#marketing">Marketing</a>
+                </div>
+                
+                <div class="haraya-footer-links-group">
+                    <h4 class="haraya-footer-heading">Contact</h4>
+                    <a href="start-project.html">Start a Project</a>
+                    <a href="mailto:hello@harayacreativeagency.com">Email Us</a>
+                    <a href="tel:+638174941709">Call Us</a>
+                </div>
+
+                <div class="haraya-footer-contact-info">
+                    <h4 class="haraya-footer-heading">Get in Touch</h4>
+                    <div class="haraya-footer-contact-item">
+                        <span class="haraya-footer-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </span>
+                        <a href="tel:+638174941709">+63 8174941709</a>
+                    </div>
+                    <div class="haraya-footer-contact-item">
+                        <span class="haraya-footer-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </span>
+                        <a href="mailto:hello@harayacreativeagency.com">hello@harayacreativeagency.com</a>
+                    </div>
+                    <div class="haraya-footer-contact-item">
+                        <span class="haraya-footer-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </span>
+                        <a href="https://maps.google.com/?q=343+Manila+S+Rd,+Tunasan,+Muntinlupa,+Metro+Manila+1781" target="_blank" rel="noopener noreferrer">
+                            343 Manila S Rd, Tunasan, Muntinlupa, Metro Manila 1781
+                            <small>Along National Highway, In front of Kenny Rogers Roasters - Muntinlupa, Beside Dray Copier Solutions</small>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="haraya-footer-map-area">
+                    <a href="https://maps.google.com/?q=343+Manila+S+Rd,+Tunasan,+Muntinlupa,+Metro+Manila+1781" target="_blank" rel="noopener noreferrer" class="haraya-footer-map-placeholder" aria-label="Open in Google Maps">
+                        <span class="haraya-footer-map-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </span>
+                        <span>View on Google Maps</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="haraya-footer-bottom">
+                <p>&copy; 2026 Haraya Creative Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
