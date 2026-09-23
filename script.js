@@ -161,10 +161,6 @@ window.addEventListener(
             );
 
 
-        /* -----------------------------------------
-           HERO CIRCLE
-        ----------------------------------------- */
-
         const isMobile =
             window.innerWidth <= 600;
 
@@ -208,10 +204,6 @@ window.addEventListener(
                 : `${circleHeight}px`;
 
 
-        /* -----------------------------------------
-           HERO CONTENT
-        ----------------------------------------- */
-
         if (heroProgress > 0.2) {
 
             agencyTitle.classList.add(
@@ -242,10 +234,6 @@ window.addEventListener(
 
         }
 
-
-        /* -----------------------------------------
-           SHOW NAV AFTER HERO
-        ----------------------------------------- */
 
         if (
             scrollY >
@@ -309,7 +297,10 @@ const campaigns = [
             "A campaign designed to capture attention, establish a visual identity, and make a brand impossible to overlook.",
 
         category:
-            "BRAND CAMPAIGN"
+            "BRAND CAMPAIGN",
+
+        image:
+            "assets/campaign1.png"
 
     },
 
@@ -326,7 +317,10 @@ const campaigns = [
             "Creative content built around a clear message, turning what your brand has to say into something audiences want to hear.",
 
         category:
-            "CONTENT CAMPAIGN"
+            "CONTENT CAMPAIGN",
+
+        image:
+            "assets/campaign2.png"
 
     },
 
@@ -343,7 +337,10 @@ const campaigns = [
             "Strategic marketing that connects creative ideas with real goals and gives audiences a reason to engage.",
 
         category:
-            "MARKETING CAMPAIGN"
+            "MARKETING CAMPAIGN",
+
+        image:
+            "assets/campaign3.png"
 
     }
 
@@ -422,6 +419,22 @@ function updateCampaign(index) {
                 campaign.category;
 
 
+            campaignImage.innerHTML = "";
+
+            const image =
+                document.createElement("img");
+
+            image.src =
+                campaign.image;
+
+            image.alt =
+                campaign.small;
+
+            campaignImage.appendChild(
+                image
+            );
+
+
             campaignDots.forEach(
                 (dot, dotIndex) => {
 
@@ -467,25 +480,6 @@ const workSection =
 const campaignStage =
     document.querySelector(".campaign-stage");
 
-
-/*
-    IMPORTANT: campaignStage uses position: sticky.
-
-    Once a sticky element becomes "stuck", the browser
-    reports its offsetTop as shifting together with the
-    scroll position (it no longer reflects the element's
-    original, static position in the page).
-
-    That means these values can NOT be recalculated
-    from campaignStage.offsetTop inside the scroll
-    handler — doing so made stageStart chase scrollY
-    on every frame, so campaignProgress stayed pinned
-    near 0 and the campaigns never advanced.
-
-    Instead, the geometry is measured once (on load
-    and on resize, while everything is still laid out
-    in its natural, non-stuck flow) and cached here.
-*/
 
 let stageStart = 0;
 let stageHeight = 0;
@@ -555,10 +549,6 @@ window.addEventListener(
             campaignScrollDistance;
 
 
-        /*
-            Keep the progress between 0 and 1.
-        */
-
         const progress =
             Math.max(
                 0,
@@ -568,12 +558,6 @@ window.addEventListener(
                 )
             );
 
-
-        /*
-            01 = first third
-            02 = second third
-            03 = final third
-        */
 
         let index =
             Math.floor(
@@ -591,11 +575,6 @@ window.addEventListener(
                 )
             );
 
-
-        /*
-            Only update while the campaign
-            sticky experience is active.
-        */
 
         const stickyEnd =
             sectionBottom -
@@ -616,6 +595,7 @@ window.addEventListener(
         passive: true
     }
 );
+
 
 /* =====================================================
    CAMPAIGN DOT CLICK
@@ -889,11 +869,6 @@ updateProcess(0);
 window.addEventListener(
     "resize",
     () => {
-
-        /*
-            Recalculate hero geometry
-            on resize.
-        */
 
         const scrollY =
             window.scrollY;
